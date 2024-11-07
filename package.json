@@ -1,0 +1,16 @@
+{
+  "name": "dynamic-resume-builder",
+  "version": "1.0.0",
+  "description": "A dynamic resume builder using TypeScript.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "firebase": "^11.0.1"
+  }
+}

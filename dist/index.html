@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <!-- Initial Resume -->
+      <div id="resume" class="container">
+        <div class="resume_Top">
+          <img
+            id="profileImageDisplay"
+            src="./assets/myProfile.webp"
+            class="profile-image"
+            alt="Profile Picture"
+          />
+          <section id="personal-info">
+            <h1>Hunain Afzal</h1>
+            <p>kajhunain@gmail.com</p>
+            <p>03** 1245635</p>
+          </section>
+        </div>
+        <div class="resume_bottom">
+          <section id="education">
+            <h1>Education</h1>
+            <h3>Intermediate</h3>
+            <p>Goverment Boys Collage</p>
+          </section>
+          <section id="experience">
+            <h1>Work Experience</h1>
+            <h3>Frontend Developer</h3>
+            <p>Kaj Consultancy</p>
+          </section>
+        </div>
+        <section id="skillsSection">
+          <h1>Skills</h1>
+          <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>ReactJs</li>
+            <li>NextJs</li>
+          </ul>
+        </section>
+        <button id="downloadResumeBtn">Download Resume</button>
+        <button id="editResumeBtn">Edit Resume</button>
+        <button id="emailShareBtn">Share via Email</button>
+        <!-- Edit button -->
+      </div>
+      <button id="generateResumeBtn">Generate Your Resume</button>
+      <!-- Form to Generate Resume -->
+      <div id="resumeWrapper" class="container hidden">
+        <form id="resumeForm">
+          <h1>Dynamic Resume Builder</h1>
+          <h2>Personal Information</h2>
+          <div>
+            <label for="profileImage">Profile-image</label>
+            <input
+              type="file"
+              id="profileImageInput"
+              accept="image/*"
+              required
+            />
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="personal-info fields-main">
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Enter your phone Number"
+                required
+              />
+            </div>
+          </div>
+
+          <h2>Education</h2>
+          <div class="education-info fields-main">
+            <div>
+              <label for="degree">Degree:</label>
+              <input
+                type="text"
+                id="degree"
+                placeholder="Enter your degree"
+                required
+              />
+            </div>
+            <div>
+              <label for="institution">Institution:</label>
+              <input
+                type="text"
+                id="institution"
+                placeholder="Enter your institute"
+                required
+              />
+            </div>
+          </div>
+
+          <h2>Work Experience</h2>
+          <div class="fields-main">
+            <div>
+              <label for="jobTitle">Job Title:</label>
+              <input
+                type="text"
+                id="jobTitle"
+                placeholder="Enter your job title"
+                required
+              />
+            </div>
+            <div>
+              <label for="company">Company Name:</label>
+              <input
+                type="text"
+                id="company"
+                placeholder="Enter your company name"
+                required
+              />
+            </div>
+          </div>
+
+          <h2>Skills</h2>
+          <label for="skills">Skills (Comma Separated):</label>
+          <input
+            type="text"
+            id="skills"
+            placeholder="Enter your skills (HTML , CSS , JavaScript)"
+            required
+          />
+
+          <button type="submit">Generate Resume</button>
+        </form>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
